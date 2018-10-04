@@ -12,8 +12,8 @@ class Artist
     self.songs << song unless self.songs.include?(song)
   end 
   
-  def self.all 
-    @@all 
+  def all 
+    self.class.all 
   end 
   
   def save 
