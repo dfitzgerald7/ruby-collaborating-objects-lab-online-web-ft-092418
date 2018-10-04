@@ -21,7 +21,7 @@ class Artist
   end 
   
   def self.find_or_create_by_name(name)
-    binding.pry
+    #binding.pry
     found_artist = nil 
     self.all.each {|artist| found_artist = artist if artist.name == name }
     if !found_artist
@@ -29,6 +29,7 @@ class Artist
     else 
       found_artist
     end 
+    binding.pry
   end 
   
   def print_songs 
