@@ -21,6 +21,7 @@ class Artist
   end 
   
   def self.find_or_create_by_name(name)
+    binding.pry
     if artist_name = self.all.map{|artist| artist.name}.include?(name)
       artist_name 
     else 
