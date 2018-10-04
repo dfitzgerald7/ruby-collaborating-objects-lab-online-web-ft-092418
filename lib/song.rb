@@ -13,6 +13,7 @@ class Song
     temp_artist = name_arr[0]
     temp_name = name_arr[1]
     temp_genre = name_arr[2][0...-4]
+    binding.pry
     self.new(name).tap {|song| song.artist = Artist.find_or_create_by_name(temp_artist)}
   end 
   
