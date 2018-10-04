@@ -14,10 +14,11 @@ class Song
   def self.new_by_filename(file_name)
    # binding.pry
     name_arr = file_name.split(" - ")
-    #binding.pry
+    
     artist = name_arr[0]
     name = name_arr[1]
     genre = name_arr[2][0...-4]
+    self.new(name)
   end 
   
 end 
