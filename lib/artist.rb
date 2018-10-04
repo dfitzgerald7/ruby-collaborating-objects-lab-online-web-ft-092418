@@ -22,8 +22,9 @@ class Artist
   
   def self.find_or_create_by_name(name)
     binding.pry
-    if artist_name = self.all.map{|artist| artist.name}.include?(name)
-      artist_name 
+    found_artist = nil 
+    if self.all.each {|artist| found_artist = artist if artist.name == name }
+       
     else 
       Artist.new(name)
     end 
