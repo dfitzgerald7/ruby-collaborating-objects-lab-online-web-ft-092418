@@ -13,7 +13,7 @@ class Song
     temp_artist = name_arr[0]
     temp_name = name_arr[1]
     temp_genre = name_arr[2][0...-4]
-    self.new(name)
+    self.new(name).tap {|song| song.artist = temp_artist}
   end 
   
 end 
