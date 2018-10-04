@@ -24,9 +24,10 @@ class Artist
     binding.pry
     found_artist = nil 
     self.all.each {|artist| found_artist = artist if artist.name == name }
-       
-    else 
+    if !found_artist
       Artist.new(name)
+    else 
+      found_artist
     end 
   end 
   
