@@ -29,7 +29,7 @@ class Artist
     else 
       found_artist
     end 
-    binding.pry
+   # binding.pry
   end 
   
   def print_songs 
