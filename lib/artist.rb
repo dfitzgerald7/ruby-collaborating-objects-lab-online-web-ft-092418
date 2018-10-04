@@ -24,7 +24,7 @@ class Artist
     found_artist = nil 
     self.all.each {|artist| found_artist = artist if artist.name == name }
     if !found_artist
-      Artist.new(name)
+      Artist.new(name).tap {|artist| artist.save}
     else 
       found_artist
     end 
