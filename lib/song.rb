@@ -6,8 +6,6 @@ class Song
     self.name = name 
   end 
   
-
-  
   def self.new_by_filename(file_name)
    # binding.pry
     name_arr = file_name.split(" - ")
